@@ -5,10 +5,10 @@
 @media(max-width:580px){.brand-logo{height:33px;max-width:155px}}
 /* Client proof gallery, positioned immediately below the hero */
 .proof-section{position:relative;padding:84px 0 110px;overflow:hidden;background:#fff}
-.proof-section:before{content:"";position:absolute;inset:0 0 auto;height:220px;pointer-events:none;background:linear-gradient(180deg,rgba(248,245,255,.55),rgba(255,255,255,0))}
+.proof-section:before{content:"";position:absolute;inset:0 0 auto;height:220px;pointer-events:none;background:linear-gradient(180deg,rgba(255,240,242,.68),rgba(255,255,255,0))}
 .proof-heading{position:relative;text-align:center;margin-bottom:38px}
-.proof-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10px;font-weight:800;letter-spacing:.15em;color:#846bc6;text-transform:uppercase}
-.proof-eyebrow:before{content:"";width:7px;height:7px;background:#9175ea;border-radius:50%}
+.proof-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10px;font-weight:800;letter-spacing:.15em;color:#b2223e;text-transform:uppercase}
+.proof-eyebrow:before{content:"";width:7px;height:7px;background:#e24b60;border-radius:50%}
 .proof-heading h2{font-size:clamp(32px,4.1vw,53px);line-height:1.15;letter-spacing:-.065em;margin:17px 0 14px;font-weight:800}
 .proof-heading h2 em{font-style:normal;color:#92909a}
 .proof-heading p{font-size:13px;line-height:1.8;color:#777780;max-width:525px;margin:0 auto}
@@ -19,15 +19,15 @@
 .proof-track{display:flex;width:max-content;animation:proof-marquee 105s linear infinite;will-change:transform}
 .proof-group{display:flex;gap:18px;padding-right:18px;align-items:stretch}
 .proof-slide{width:clamp(280px,33vw,455px);height:clamp(205px,26vw,322px);border:1px solid #e8e8ee;border-radius:15px;overflow:hidden;background:#fafafc;box-shadow:0 12px 35px rgba(31,31,45,.065);position:relative;display:block;flex-shrink:0;padding:0;transition:border-color .2s,box-shadow .2s}
-.proof-slide:hover{border-color:#bdafe6;box-shadow:0 15px 37px rgba(55,45,85,.12)}
+.proof-slide:hover{border-color:#e3a5ae;box-shadow:0 15px 37px rgba(149,29,53,.13)}
 .proof-slide img{width:100%;height:100%;object-fit:contain;display:block;background:#f8f8fa}
 .proof-zoom{position:absolute;right:12px;bottom:12px;background:rgba(18,18,24,.84);color:#fff;border-radius:999px;font-size:11px;font-weight:700;line-height:1;padding:10px 13px;opacity:0;transform:translateY(5px);transition:.2s}
 .proof-slide:hover .proof-zoom,.proof-slide:focus-visible .proof-zoom{opacity:1;transform:none}
 .proof-scroller:hover .proof-track,.proof-scroller:focus-within .proof-track,.proof-scroller.is-paused .proof-track{animation-play-state:paused}
 @keyframes proof-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .proof-bottom{position:relative;display:flex;align-items:center;justify-content:center;gap:20px;margin-top:27px;color:#94939e;font-size:11px}
-.proof-toggle{border:1px solid #e9e7ed;background:#fff;border-radius:999px;padding:9px 14px;font-size:11px;font-weight:700;color:#494556;transition:border-color .2s}
-.proof-toggle:hover{border-color:#9f8cdc}
+.proof-toggle{border:1px solid #e9e7ed;background:#fff;border-radius:999px;padding:9px 14px;font-size:11px;font-weight:700;color:#51404a;transition:border-color .2s}
+.proof-toggle:hover{border-color:#d94057}
 .proof-dialog{position:fixed;inset:0;z-index:9999;background:rgba(13,12,21,.91);display:flex;justify-content:center;align-items:center;padding:65px 18px 24px;cursor:zoom-out}
 .proof-dialog img{object-fit:contain;display:block;max-height:calc(100vh - 100px);max-width:min(1100px,100%);width:auto;height:auto;border-radius:8px;box-shadow:0 20px 70px rgba(0,0,0,.25);cursor:default}
 .proof-dialog-close{position:absolute;top:18px;right:22px;background:#fff;color:#14131b;border:0;border-radius:999px;width:39px;height:39px;font-size:23px;line-height:1;display:grid;place-items:center;cursor:pointer}
@@ -50,3 +50,12 @@ body.proof-dialog-open{overflow:hidden}
 }
 /* Respect the HTML hidden attribute. Without this, display:flex keeps the image lightbox open over the entire site on first load. */
 .proof-dialog[hidden]{display:none !important}
+
+/* Ignite red proof gallery theme */
+.proof-section:before{background:linear-gradient(180deg,rgba(255,235,238,.68),rgba(255,255,255,0))}
+.proof-eyebrow{color:#b2223e}
+.proof-eyebrow:before{background:linear-gradient(135deg,#ff6d73,#c31837)}
+.proof-heading h2 em{background:linear-gradient(105deg,#a81936,#e84657);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#c31837}
+.proof-slide:hover{border-color:#e59aa6;box-shadow:0 15px 37px rgba(162,30,58,.13)}
+.proof-toggle:hover{border-color:#e16d80;color:#a41d38}
+.proof-dialog[hidden]{display:none!important}
