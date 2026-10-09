@@ -1,113 +1,113 @@
 (() => {
   const steps = [
-      {
-          "icon": "↗",
-          "tag": "OPPORTUNITY IDENTIFIED",
-          "symbol": "✳",
-          "title": "An opportunity enters the system.",
-          "description": "Sarah reaches out about AC service. Her request is captured, organized and ready for a fast reply.",
-          "footer": "Inquiry added to a visible pipeline",
-          "mini": "Every opportunity has a next step",
-          "detail": "Nothing sits in an inbox waiting to be remembered.",
-          "time": "Day 1",
-          "context": "New homeowner request"
-      },
-      {
-          "icon": "☎",
-          "tag": "QUICK FIRST CONTACT",
-          "symbol": "☎",
-          "title": "A timely response starts the conversation.",
-          "description": "A first-contact workflow helps Sarah get the information she needs while her request is still top of mind.",
-          "footer": "Initial outreach initiated",
-          "mini": "Response handled, team stays focused",
-          "detail": "The system supports the team without another manual task.",
-          "time": "Minutes later",
-          "context": "Initial conversation"
-      },
-      {
-          "icon": "◷",
-          "tag": "NOT READY YET",
-          "symbol": "◷",
-          "title": "Not buying today doesn't mean lost forever.",
-          "description": "Sarah isn't ready to schedule yet. Helpful, spaced-out follow-up keeps the relationship warm until the timing is right.",
-          "footer": "Long-term nurture continues",
-          "mini": "Follow-up without daily chasing",
-          "detail": "An interested homeowner is not forgotten after one try.",
-          "time": "Weeks later",
-          "context": "Still considering"
-      },
-      {
-          "icon": "▤",
-          "tag": "OPEN ESTIMATE",
-          "symbol": "▤",
-          "title": "A quote goes out. Follow-up stays on.",
-          "description": "An estimate is still open. A thoughtful check-in gives Sarah an easy path to ask questions and move forward.",
-          "footer": "Pending estimate surfaced for follow-up",
-          "mini": "Open quotes stay visible",
-          "detail": "Your team knows what's pending instead of guessing.",
-          "time": "Estimate pending",
-          "context": "Decision still open"
-      },
-      {
-          "icon": "✓",
-          "tag": "FIRST JOB SCHEDULED",
-          "symbol": "✓",
-          "title": "The opportunity becomes a booked job.",
-          "description": "Sarah decides to move ahead. The job is scheduled, and the pipeline updates so the next handoff is clear.",
-          "footer": "Opportunity marked as booked",
-          "mini": "A booked job, not just a lead",
-          "detail": "The system tracks real progress toward revenue.",
-          "time": "When ready",
-          "context": "Job scheduled"
-      },
-      {
-          "icon": "★",
-          "tag": "SERVICE COMPLETE",
-          "symbol": "★",
-          "title": "The job ends. The relationship doesn't.",
-          "description": "After service, Sarah can receive a thoughtful thank-you and a review invitation while her history stays organized.",
-          "footer": "Customer moved into post-service care",
-          "mini": "Your customer history becomes an asset",
-          "detail": "The next opportunity can start with someone who knows you.",
-          "time": "After service",
-          "context": "Past customer"
-      },
-      {
-          "icon": "↻",
-          "tag": "CUSTOMER REACTIVATION",
-          "symbol": "↻",
-          "title": "Two months later, Ignite reconnects.",
-          "description": "A relevant follow-up reaches Sarah again. She remembers the work you did and has another service need.",
-          "footer": "Past customer re-engagement initiated",
-          "mini": "New work from an existing relationship",
-          "detail": "Stay top of mind without your team chasing manually.",
-          "time": "2 months later",
-          "context": "Existing customer"
-      },
-      {
-          "icon": "▦",
-          "tag": "REPEAT JOB BOOKED",
-          "symbol": "▦",
-          "title": "A second job, without starting over.",
-          "description": "Sarah schedules another visit with a company she already trusts. The returning-customer job is tracked.",
-          "footer": "Repeat booking moved into the calendar",
-          "mini": "Consistency compounds across customers",
-          "detail": "One good experience can lead to the next opportunity.",
-          "time": "Next service",
-          "context": "Returning customer"
-      },
-      {
-          "icon": "∞",
-          "tag": "GROWTH CONTINUES",
-          "symbol": "∞",
-          "title": "The engine keeps running.",
-          "description": "Existing relationships, open estimates, future-ready homeowners, reviews and referrals all create new paths to booked work.",
-          "footer": "Ongoing follow-up and customer care",
-          "mini": "Not a one-and-done funnel",
-          "detail": "Capture, recover, rebook and stay remembered.",
-          "time": "Always active",
-          "context": "Ongoing growth cycle"
-      }
+    {
+      "icon": "▦",
+      "tag": "INQUIRIES ORGANIZED",
+      "symbol": "▦",
+      "title": "Every opportunity enters a clear system.",
+      "description": "An AC service request comes in. Sarah's details land in one pipeline instead of getting buried in messages or missed calls.",
+      "footer": "Inquiry captured and assigned",
+      "mini": "Better systems start with visibility",
+      "detail": "Know which opportunities need action.",
+      "time": "Day 1",
+      "context": "Homeowner reaches out"
+    },
+    {
+      "icon": "☎",
+      "tag": "FAST FIRST RESPONSE",
+      "symbol": "☎",
+      "title": "Respond while the opportunity is fresh.",
+      "description": "The right first-contact workflow helps Sarah get a timely answer, without relying on an owner to remember every follow-up.",
+      "footer": "Response workflow activated",
+      "mini": "Less manual chasing for your team",
+      "detail": "Speed and consistency help more conversations move.",
+      "time": "Minutes later",
+      "context": "Conversation started"
+    },
+    {
+      "icon": "⌕",
+      "tag": "QUALIFY AND QUOTE",
+      "symbol": "⌕",
+      "title": "Turn interest into a real sales opportunity.",
+      "description": "Sarah's needs are recorded, the next step is clear, and an estimate is prepared. Your team can see exactly where the job stands.",
+      "footer": "Estimate and next step tracked",
+      "mini": "From inquiry to decision",
+      "detail": "A reliable process replaces scattered notes.",
+      "time": "After contact",
+      "context": "Estimate prepared"
+    },
+    {
+      "icon": "◷",
+      "tag": "RECOVER STALLED WORK",
+      "symbol": "◷",
+      "title": "Not ready today? Don't lose the job.",
+      "description": "Sarah needs time to decide and her quote stays open. Timely check-ins keep the estimate moving without pushing or being forgotten.",
+      "footer": "Open estimate follow-up scheduled",
+      "mini": "Revenue recovery stays active",
+      "detail": "Delayed buyers get attention when the timing fits.",
+      "time": "Days or weeks later",
+      "context": "Pending estimate"
+    },
+    {
+      "icon": "✓",
+      "tag": "FIRST JOB BOOKED",
+      "symbol": "✓",
+      "title": "A stronger process turns into a booked job.",
+      "description": "Sarah moves forward. Her service is scheduled and the pipeline updates so no handoff or next step falls through.",
+      "footer": "First job booked and recorded",
+      "mini": "Conversion is the first win",
+      "detail": "The goal is booked work, not just more inquiries.",
+      "time": "When ready",
+      "context": "Job on the calendar"
+    },
+    {
+      "icon": "★",
+      "tag": "JOB COMPLETED",
+      "symbol": "★",
+      "title": "Deliver great work. Keep the relationship.",
+      "description": "Once the job is complete, customer details and service history stay organized. A thoughtful thank-you or review request keeps the experience connected.",
+      "footer": "Completed job enters customer care",
+      "mini": "The customer is now an asset",
+      "detail": "Work completed is not a relationship finished.",
+      "time": "After service",
+      "context": "Customer relationship"
+    },
+    {
+      "icon": "↻",
+      "tag": "PAST CUSTOMER FOLLOW-UP",
+      "symbol": "↻",
+      "title": "Two months later, stay top of mind.",
+      "description": "A relevant follow-up checks in with Sarah. When another service need comes up, she already knows the business and who to call.",
+      "footer": "Customer re-engagement scheduled",
+      "mini": "Past jobs can create new opportunities",
+      "detail": "Stay remembered without another manual task.",
+      "time": "2 months later",
+      "context": "Existing customer"
+    },
+    {
+      "icon": "▣",
+      "tag": "REPEAT JOB BOOKED",
+      "symbol": "▣",
+      "title": "The same customer books again.",
+      "description": "Sarah schedules another service. The system tracks returning-customer work and makes it easy for the team to keep delivering.",
+      "footer": "Returning customer's job booked",
+      "mini": "One customer, more lifetime value",
+      "detail": "The first booking becomes the start of growth.",
+      "time": "Next service",
+      "context": "Repeat booking"
+    },
+    {
+      "icon": "∞",
+      "tag": "GROWTH ENGINE CONTINUES",
+      "symbol": "∞",
+      "title": "Better first bookings. Stronger long-term growth.",
+      "description": "New inquiries get handled, pending estimates stay visible, and past customers receive relevant follow-up. Reviews and referrals support the next wave of opportunities.",
+      "footer": "Conversion and retention systems connected",
+      "mini": "One engine for today and tomorrow",
+      "detail": "Get the job, keep the customer, earn the next one.",
+      "time": "Always on",
+      "context": "Continuous growth"
+    }
   ];
 
   let current=0;
