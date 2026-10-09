@@ -116,7 +116,81 @@
   els.next.addEventListener('click',()=>{current=current===steps.length-1?0:current+1;render()});els.reset.addEventListener('click',()=>{current=0;render()});document.querySelectorAll('.journey-step').forEach((item,i)=>{item.addEventListener('click',()=>{current=i;render()});item.style.cursor='pointer';item.setAttribute('role','button');item.tabIndex=0;item.setAttribute('aria-label','Preview step '+(i+1));item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();current=i;render()}})});render();
   const menu=document.getElementById('menu-toggle'),mobile=document.getElementById('mobile-menu');function closeMenu(){mobile.hidden=true;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation')}menu.addEventListener('click',()=>{mobile.hidden=!mobile.hidden;menu.setAttribute('aria-expanded',String(!mobile.hidden));menu.setAttribute('aria-label',mobile.hidden?'Open navigation':'Close navigation')});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.getElementById('year').textContent=String(new Date().getFullYear());
   const observer=('IntersectionObserver'in window)?new IntersectionObserver((entries)=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.09}):null;document.querySelectorAll('.problem-card,.section-head,.center-head,.process-item,.pillars-layout,.cta-card,.retention-stream,.retention-loop').forEach(el=>{if(observer){el.classList.add('reveal');observer.observe(el)}});
-  const form=document.getElementById('lead-form'),button=document.getElementById('lead-submit'),message=document.getElementById('form-message');
-  function fallbackMailto(payload){const subject=encodeURIComponent('Ignite Co. website inquiry: '+payload.company);const body=encodeURIComponent('Hi Ignite Co.,\n\nI would like to discuss a growth system for my company.\n\nName: '+payload.name+'\nCompany: '+payload.company+'\nEmail: '+payload.email+'\nPhone: '+payload.phone+'\nIndustry: '+payload.industry+'\n');window.location.href='mailto:asher.igniteco@gmail.com?subject='+subject+'&body='+body}
-  form.addEventListener('submit',async e=>{e.preventDefault();message.textContent='';message.classList.remove('error');const fd=new FormData(form);const data={name:String(fd.get('name')||'').trim(),company:String(fd.get('company')||'').trim(),email:String(fd.get('email')||'').trim(),phone:String(fd.get('phone')||'').trim(),industry:String(fd.get('industry')||'').trim(),website:String(fd.get('website')||'')};if(!data.name||!data.company||!data.email||!data.phone||!data.industry||!/^\S+@\S+\.\S+$/.test(data.email)){message.textContent='Please complete all fields with a valid email.';message.classList.add('error');return}button.disabled=true;button.textContent='Sending your request…';try{const response=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});let result={};try{result=await response.json()}catch{}if(response.ok&&result.ok){form.reset();message.textContent='Thanks! Your request is in. We’ll reach out soon.'}else if(response.status===503){message.textContent='Your email app will open with the details ready to send.';fallbackMailto(data)}else{throw new Error(result.error||'Unable to submit right now.')}}catch(error){message.textContent='The form could not send automatically. Your email app will open with your details ready to send.';fallbackMailto(data)}finally{button.disabled=false;button.innerHTML='Request a conversation <span aria-hidden="true">↗</span>'}});
+  // Simple email notifications via FormSubmit. No CRM and no paid email API key required.
+  // The form recipient must confirm the one-time activation message sent by FormSubmit.
+  const form = document.getElementById('lead-form');
+  const button = document.getElementById('lead-submit');
+  const message = document.getElementById('form-message');
+  const endpoint = 'https://formsubmit.co/ajax/asher.igniteco@gmail.com';
+  const thankYouPath = '/thank-you.html';
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (button.disabled) return;
+    message.textContent = '';
+    message.classList.remove('error');
+
+    const fields = new FormData(form);
+    const data = {
+      name: String(fields.get('name') || '').trim(),
+      company: String(fields.get('company') || '').trim(),
+      email: String(fields.get('email') || '').trim(),
+      phone: String(fields.get('phone') || '').trim(),
+      industry: String(fields.get('industry') || '').trim(),
+      honeypot: String(fields.get('_honey') || '')
+    };
+
+    if (data.honeypot) return;
+    if (!data.name || !data.company || !data.email || !data.phone || !data.industry ||
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      message.textContent = 'Please complete all fields with a valid email address.';
+      message.classList.add('error');
+      return;
+    }
+
+    button.disabled = true;
+    button.textContent = 'Sending your request…';
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 18000);
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          company: data.company,
+          email: data.email,
+          phone: data.phone,
+          industry: data.industry,
+          source: 'www.igniteco.org website contact form',
+          _subject: 'New Ignite Co. website inquiry',
+          _template: 'table',
+          _captcha: 'false',
+          _honey: '',
+          _url: 'https://www.igniteco.org/'
+        }),
+        signal: controller.signal
+      });
+      let result;
+      try { result = await response.json(); } catch { result = null; }
+      const accepted = result && (result.success === true || result.success === 'true');
+      if (!response.ok || !accepted) {
+        throw new Error(result && typeof result.message === 'string' ? result.message : 'Submission not accepted');
+      }
+      form.reset();
+      // Redirect only after the provider accepts the request, never after a network or validation error.
+      window.location.assign(thankYouPath);
+    } catch (error) {
+      message.textContent = error.name === 'AbortError'
+        ? 'The request took too long. Please try again.'
+        : 'We couldn’t send your request right now. Please try again, or email asher.igniteco@gmail.com directly.';
+      message.classList.add('error');
+    } finally {
+      window.clearTimeout(timeout);
+      button.disabled = false;
+      button.innerHTML = 'Request a conversation <span aria-hidden="true">↗</span>';
+    }
+  });
+
 })();
