@@ -1,28 +1,42 @@
-# Ignite Co. | Home Service Growth Website
+# Ignite Co. Website
 
-A standalone, responsive Ignite Co. marketing website inspired by the layout language of trygtm.com, built with original Ignite messaging and an interactive lead journey demo. No pricing is displayed.
+Responsive standalone marketing website for **www.igniteco.org**, deployed on Vercel from this GitHub repository.
+
+## Contact form and email delivery
+
+The footer and CTA popup contain **one shared form**, with name, company, email, phone and industry.
+
+**Delivery service:** [FormSubmit.co](https://formsubmit.co/) (free, no GoHighLevel workflow or Supabase required).
+
+- The browser submits to `https://formsubmit.co/ajax/asher.igniteco@gmail.com`.
+- The form has an HTML `action` fallback to FormSubmit in case JavaScript fails.
+- On the email provider's accepted response, visitors are redirected to `/thank-you.html`.
+- A failed response remains on the form, shows an error, and does **not** redirect to the success page.
+- The provider sends the submission fields in a notification email to `asher.igniteco@gmail.com`. The address is the recipient, not the customer.
+- A hidden honeypot field helps filter spam.
+
+### One-time activation required
+
+FormSubmit requires the recipient to confirm ownership of the Gmail inbox. After deployment:
+
+1. Submit one test inquiry from the live website (for example, company "Ignite Co Test").
+2. Check **asher.igniteco@gmail.com** for the FormSubmit confirmation email (also check Spam/Promotions).
+3. Click the activation link to enable delivery. FormSubmit may hold earlier submissions pending activation for up to 30 days.
+4. Submit a second test, verify that the email contains name, company, work email, phone, and industry, then reply to the visitor's address if desired.
+
+Until that confirmation happens, automatic email delivery **cannot be considered verified**.
 
 ## Files
-- `index.html`, `styles.css`, `script.js`: static website and interactive lead simulation
-- `favicon.svg`: vector site icon
-- `api/lead.js`: Vercel serverless contact form endpoint
-- `supabase/migrations/20261009_ignite_website_leads.sql`: isolated lead capture table, safe to add to an approved Supabase project
 
-## Run locally
-`python3 -m http.server 8080` then open `http://localhost:8080` (the lead API works only after a Vercel deployment).
+- `index.html`: content and single lead form
+- `script.js`: interactive demo and email form handler
+- `styles.css`, `enhancements.css`, `pricing.css`, `mobile-modal.css`, `lifecycle.css`: styling
+- `enhancements.js`, `mobile-modal.js`: animation, gallery, modal behavior
+- `thank-you.html`: branded form success page
 
-## Deploy
-1. Create a GitHub repo dedicated to this site and push these files to its default branch.
-2. Import the repo to Vercel (Framework: Other; build command and output directory unset) or deploy the files to a new Vercel project.
-3. Apply the SQL migration to the chosen Supabase project.
-4. In Vercel, set server-side environment variables `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` for the production environment, then redeploy.
-5. Test a submission before routing paid traffic to the site. Until Supabase is configured, the contact form transparently falls back to a prefilled email to `asher.igniteco@gmail.com`.
+## Notes
 
-## Editing
-- Update brand/copy in `index.html`.
-- Update the interactive demo steps in `script.js`.
-- Update contact email in `index.html` and `script.js` if needed.
-- If you have a calendar scheduling URL, change the CTA links or add it after lead capture.
-
-## Privacy
-The demo is illustrative. It does not display real clients, real messages, or guarantee any result. No third-party prospecting or payment functionality is included.
+- The previous Supabase API handler and SQL migration are no longer referenced by the contact form and require no configuration.
+- Contact details are processed by FormSubmit as a third-party form email service; review its privacy terms before collecting sensitive information.
+- Customer examples in the demo are illustrative, not real live customer data.
+- No public pricing is shown.
