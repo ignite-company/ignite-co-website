@@ -1,0 +1,77 @@
+/* Mobile-safe viewport + unified conversion modal | Ignite Co. */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{touch-action:pan-y pinch-zoom}
+header,main,footer,.header,.hero,.section,.proof-section,.pricing-section,.industries-section,.cta-section,.ambient{max-width:100%;min-width:0}
+.container,.nav-shell,.showcase-wrap,.workspace,.workspace-body,.workspace-main,.journey-grid,.journey-left,.journey-right,.activity-card,.pricing-top,.pricing-cards,.pricing-card,.cta-card,.contact-panel,.two-fields,.proof-scroller{min-width:0}
+.container,.nav-shell,.showcase-wrap,.proof-section,.pricing-section,.cta-section{box-sizing:border-box}
+img,svg,video,canvas{max-width:100%}
+.proof-scroller{max-width:100vw;overflow-x:hidden}
+.proof-track{max-width:none}
+.pricing-flow-node,.pricing-signal{min-width:0}
+#contact{scroll-margin-top:65px}
+@media(max-width:580px){
+  .container{width:100%;max-width:100%}
+  .nav-shell{width:100%;max-width:100%;min-width:0}
+  .hero,.hero-actions,.showcase-wrap,.pricing-top,.pricing-cards,.industries-section,.cta-card{max-width:100%;min-width:0}
+  .hero h1{overflow-wrap:break-word}
+  .hero-description,.showcase-footnote{overflow-wrap:anywhere}
+  .workspace-main,.journey-left,.journey-right{min-width:0}
+  .demo-heading,.journey-topline,.demo-bottom{min-width:0}
+  .pricing-bottom .btn{white-space:normal}
+  .contact-panel form input,.contact-panel form select{min-width:0;max-width:100%}
+}
+@media(max-width:380px){
+  .hero-actions{flex-direction:column;align-items:center}
+  .hero-actions .btn{width:min(100%,290px)}
+  .announcement{padding:0 8px}
+}
+/* In-page form reused for every CTA: one form, one submission handler */
+.lead-modal[hidden]{display:none!important}
+.lead-modal{position:fixed;inset:0;z-index:10020;display:flex;align-items:center;justify-content:center;padding:14px;isolation:isolate}
+.lead-modal-backdrop{position:absolute;inset:0;background:rgba(15,8,13,.77);backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px);cursor:pointer}
+.lead-modal-window{position:relative;z-index:1;width:min(940px,100%);max-width:100%;max-height:calc(100dvh - 28px);min-height:0;border-radius:22px;background:#fff;box-shadow:0 24px 100px rgba(18,6,13,.33);overflow:hidden;border:1px solid rgba(255,255,255,.23);display:flex;flex-direction:column}
+.lead-modal-scroll{overflow-y:auto;overscroll-behavior:contain;max-height:calc(100dvh - 28px);scrollbar-gutter:stable}
+.lead-modal-inner{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1fr);min-width:0}
+.lead-modal-story{background:linear-gradient(147deg,#2a111b 1%,#5e1b30 62%,#aa233f 100%);color:#fff;padding:66px 38px 43px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.lead-modal-story:before{content:"";position:absolute;pointer-events:none;inset:-15% -60% auto auto;width:480px;height:470px;background:radial-gradient(circle,rgba(255,100,116,.38),transparent 67%)}
+.lead-modal-story:after{content:"";position:absolute;pointer-events:none;left:-80px;bottom:-125px;width:350px;height:270px;background:radial-gradient(circle,rgba(255,93,124,.17),transparent 70%)}
+.lead-modal-kicker{font-size:10px;letter-spacing:.17em;font-weight:800;color:#ffbbc7;position:relative}
+.lead-modal-story h2{position:relative;font-size:clamp(31px,3.3vw,45px);font-weight:800;letter-spacing:-.068em;line-height:1.13;margin:22px 0 17px}
+.lead-modal-story h2 em{color:#ffb7be;font-style:normal}
+.lead-modal-story>p{font-size:12px;line-height:1.9;color:#e2c6cf;max-width:350px;margin:0;position:relative}
+.lead-modal-points{position:relative;display:grid;gap:15px;margin-top:auto;padding-top:35px}
+.lead-modal-point{display:flex;gap:12px;align-items:flex-start;color:#f7e7eb;font-size:11px;line-height:1.55}
+.lead-modal-point>span{width:23px;height:23px;flex:0 0 23px;border-radius:50%;border:1px solid rgba(255,184,196,.4);display:grid;place-items:center;color:#ffd7de;font-weight:800}
+.lead-modal-form-slot{min-width:0;background:#fff;display:flex;align-items:center;padding:36px 32px 27px}
+.lead-modal-form-slot .contact-panel{width:100%;max-width:100%;min-width:0;border-radius:0;box-shadow:none;padding:0;background:#fff}
+.lead-modal-form-slot .panel-heading{padding-right:42px}
+.lead-modal-form-slot .panel-heading h3{font-size:23px}
+.lead-modal-form-slot .contact-panel form input,.lead-modal-form-slot .contact-panel form select{font-size:16px;min-height:43px}
+.lead-modal-form-slot .form-submit{font-size:12px;min-height:46px}
+.lead-modal-close{position:absolute;right:14px;top:13px;z-index:4;border:1px solid #ebdfe2;display:grid;place-items:center;width:37px;height:37px;border-radius:50%;color:#4e2532;background:rgba(255,255,255,.96);box-shadow:0 4px 15px rgba(20,10,14,.09);font-size:20px;line-height:1;transition:background .15s,color .15s}
+.lead-modal-close:hover{background:#fff0f2;color:#a71433}
+.lead-modal-close:focus-visible,.lead-modal a:focus-visible,.lead-modal input:focus-visible,.lead-modal button:focus-visible{outline:2px solid #e34862;outline-offset:3px}
+html.lead-modal-open{overflow:hidden}
+body.lead-modal-open{position:fixed;left:0;right:0;width:100%;overflow:hidden}
+@media(max-width:760px){
+ .lead-modal{padding:10px}
+ .lead-modal-window{border-radius:17px;max-height:calc(100dvh - 20px)}
+ .lead-modal-scroll{max-height:calc(100dvh - 20px);scrollbar-gutter:auto}
+ .lead-modal-inner{grid-template-columns:minmax(0,1fr)}
+ .lead-modal-story{padding:30px 27px 23px}
+ .lead-modal-story h2{font-size:clamp(27px,6vw,35px);margin:13px 42px 8px 0}
+ .lead-modal-story>p{font-size:11px;line-height:1.65}
+ .lead-modal-points{display:none}
+ .lead-modal-form-slot{padding:22px 25px 25px}
+ .lead-modal-form-slot .panel-heading{margin-bottom:15px}
+ .lead-modal-form-slot .panel-heading h3{font-size:21px}
+ .lead-modal-form-slot .contact-panel form input,.lead-modal-form-slot .contact-panel form select{margin-bottom:10px}
+ .lead-modal-close{right:14px;top:14px}
+}
+@media(max-width:380px){
+ .lead-modal-story{padding:24px 20px 20px}
+ .lead-modal-story h2{font-size:27px}
+ .lead-modal-form-slot{padding:20px}
+ .lead-modal-form-slot .panel-heading h3{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){.lead-modal-close{transition:none}}
