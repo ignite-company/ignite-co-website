@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./enhancements.css" />
   <link rel="stylesheet" href="./pricing.css" />
+  <link rel="stylesheet" href="./mobile-modal.css" />
   <title>Ignite Co. | The Growth System for Home Services</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
     <div class="nav-shell">
       <a class="brand" href="#top" aria-label="Ignite Co. home"><img class="brand-logo" src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b7c8f90b5bc73b099791.png" alt="Ignite Co." /></a>
       <nav class="nav-links" aria-label="Main navigation"><a href="#systems">The systems</a><a href="#how-it-works">How it works</a><a href="#industries">Who we help</a><a href="#results">Results</a><a href="#about">Our approach</a></nav>
-      <div class="nav-actions"><a class="nav-contact" href="mailto:asher.igniteco@gmail.com?subject=Ignite%20Co.%20Inquiry">Get in touch</a><a href="#contact" class="btn btn-dark btn-nav">Let's talk <span aria-hidden="true">↗</span></a></div>
+      <div class="nav-actions"><a class="nav-contact" href="#contact">Get in touch</a><a href="#contact" class="btn btn-dark btn-nav">Let's talk <span aria-hidden="true">↗</span></a></div>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
     </div>
     <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden><a href="#systems">The systems</a><a href="#how-it-works">How it works</a><a href="#industries">Who we help</a><a href="#results">Results</a><a href="#about">Our approach</a><a class="mobile-cta" href="#contact">Let's talk ↗</a></nav>
@@ -144,8 +145,33 @@
     <section class="section industries-section" id="industries"><div class="container"><div class="center-head"><span class="section-label"><span></span> WHO WE BUILD FOR</span><h2>Built for the trades.<br/><em>Not a generic playbook.</em></h2><p>We work with established home service teams ready to handle more jobs and build a more consistent pipeline.</p></div><div class="industry-tags"><span><i>❄</i> HVAC & Heating</span><span><i>◉</i> Plumbing</span><span><i>⌂</i> Roofing</span><span><i>♧</i> Tree Services</span><span><i>▥</i> Remodeling</span><span><i>ϟ</i> Electrical</span><span><i>◈</i> Landscaping</span><span><i>↗</i> Junk Removal</span><span><i>✳</i> And more</span></div></div></section>
     <section class="cta-section" id="contact"><div class="container"><div class="cta-card"><div class="cta-orb orb-a"></div><div class="cta-orb orb-b"></div><div class="cta-text"><span class="section-label"><span></span> LET'S BUILD WHAT'S NEXT</span><h2>Your next stage of growth starts with a <em>better system.</em></h2><p>Tell us a little about your company. We'll discuss where opportunities could be slipping through the cracks and what a connected system could look like.</p></div><div class="contact-panel"><div class="panel-heading"><div><span class="panel-kicker">GET STARTED</span><h3>Tell us about your business.</h3></div><span class="panel-arrow">↗</span></div><form id="lead-form" novalidate><label for="lead-name">Your name</label><input id="lead-name" name="name" placeholder="Your full name" autocomplete="name" required maxlength="120"/><label for="lead-company">Company name</label><input id="lead-company" name="company" placeholder="Your home service company" autocomplete="organization" required maxlength="120"/><div class="two-fields"><div><label for="lead-email">Work email</label><input id="lead-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="254"/></div><div><label for="lead-phone">Phone number</label><input id="lead-phone" name="phone" type="tel" placeholder="(555) 000-0000" autocomplete="tel" required maxlength="30"/></div></div><label for="lead-industry">What kind of work do you do?</label><select id="lead-industry" name="industry" required><option value="" selected disabled>Select your industry</option><option>HVAC & Heating</option><option>Plumbing</option><option>Roofing</option><option>Remodeling</option><option>Electrical</option><option>Landscaping</option><option>Tree Services</option><option>Junk Removal</option><option>Other home services</option></select><div class="honeypot" aria-hidden="true"><label for="lead-website">Leave this field blank</label><input id="lead-website" name="website" tabindex="-1" autocomplete="off"/></div><button class="btn btn-dark form-submit" id="lead-submit" type="submit">Request a conversation <span aria-hidden="true">↗</span></button><div class="form-message" id="form-message" role="status" aria-live="polite"></div><p class="form-privacy">No hard pitch. Just a conversation about your growth.</p></form></div></div></div></section>
   </main>
-  <footer class="footer"><div class="container footer-inner"><div><a class="brand footer-brand" href="#top"><img class="brand-logo" src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b7c8f90b5bc73b099791.png" alt="Ignite Co." loading="lazy" /></a><p>The growth system for home service companies.</p></div><div class="footer-right"><a href="#systems">The systems</a><a href="#how-it-works">How it works</a><a href="mailto:asher.igniteco@gmail.com">Email us</a><a href="#top" class="back-top">Back to top ↑</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Ignite Co. All rights reserved.</span><span>Built to grow with your business.</span></div></footer>
+  <footer class="footer"><div class="container footer-inner"><div><a class="brand footer-brand" href="#top"><img class="brand-logo" src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b7c8f90b5bc73b099791.png" alt="Ignite Co." loading="lazy" /></a><p>The growth system for home service companies.</p></div><div class="footer-right"><a href="#systems">The systems</a><a href="#how-it-works">How it works</a><a href="#contact">Get in touch</a><a href="#top" class="back-top">Back to top ↑</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Ignite Co. All rights reserved.</span><span>Built to grow with your business.</span></div></footer>
+
+  <!-- All conversion calls-to-action open this single instance of the existing lead form. -->
+  <div class="lead-modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title" hidden>
+    <div class="lead-modal-backdrop" data-lead-modal-close="true" aria-hidden="true"></div>
+    <div class="lead-modal-window">
+      <button type="button" class="lead-modal-close" id="lead-modal-close" aria-label="Close contact form">×</button>
+      <div class="lead-modal-scroll">
+        <div class="lead-modal-inner">
+          <div class="lead-modal-story">
+            <span class="lead-modal-kicker">IGNITE CO. / LET'S TALK</span>
+            <h2 id="lead-modal-title">Let's unlock your next <em>growth opportunity.</em></h2>
+            <p>Tell us about your business. We'll look at where revenue and time could be slipping away, then talk through a system built for your needs.</p>
+            <div class="lead-modal-points">
+              <div class="lead-modal-point"><span aria-hidden="true">✓</span> Understand your business before recommending anything.</div>
+              <div class="lead-modal-point"><span aria-hidden="true">✓</span> Find the gaps in lead response, follow-up, and conversion.</div>
+              <div class="lead-modal-point"><span aria-hidden="true">✓</span> No preset packages. No hard pitch.</div>
+            </div>
+          </div>
+          <div class="lead-modal-form-slot" id="lead-modal-form-slot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="./script.js" defer></script>
   <script src="./enhancements.js" defer></script>
+  <script src="./mobile-modal.js" defer></script>
 </body>
 </html>
