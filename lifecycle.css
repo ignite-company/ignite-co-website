@@ -1,0 +1,83 @@
+/* Ignite Co. continuous-revenue positioning & multi-touch lifecycle. */
+.retention-section{position:relative;isolation:isolate;background:linear-gradient(180deg,#fff 0%,#fff9fa 43%,#fff 100%);border-top:1px solid #f7edef;border-bottom:1px solid #f7edef;padding-top:104px;padding-bottom:108px;overflow:hidden}
+.retention-section:before{content:"";position:absolute;z-index:-1;inset:-30% auto auto 51%;height:660px;width:min(690px,90vw);pointer-events:none;background:radial-gradient(ellipse,rgba(234,81,98,.09),transparent 72%)}
+.retention-head{display:flex;align-items:end;justify-content:space-between;gap:54px;margin-bottom:33px}
+.retention-title{max-width:730px}
+.retention-title h2{font-size:clamp(36px,4.3vw,57px);letter-spacing:-.069em;font-weight:800;line-height:1.17;margin:18px 0 0}
+.retention-title h2 em{font-style:normal;color:#b8203f;background:linear-gradient(110deg,#ad1838,#f3656b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.retention-intro{font-size:12.5px;line-height:1.85;color:#6e6871;max-width:340px;margin:0 0 6px;flex:0 0 33%}
+.retention-streams{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.retention-stream{position:relative;min-width:0;display:flex;flex-direction:column;border:1px solid #f2dfe3;border-radius:18px;background:#fff;padding:25px 22px 23px;box-shadow:0 13px 34px rgba(85,21,36,.035)}
+.retention-stream-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}
+.retention-stream-type{font-size:9px;letter-spacing:.14em;font-weight:800;color:#ab2441}
+.retention-stream-glyph{display:grid;place-items:center;height:34px;width:34px;flex:0 0 34px;border-radius:11px;background:#fff0f2;color:#bc2846;font-size:18px}
+.retention-stream h3{font-size:20px;letter-spacing:-.043em;line-height:1.25;margin:0 0 9px;color:#201318}
+.retention-stream>p{font-size:11.5px;line-height:1.78;color:#736a71;margin:0 0 22px}
+.retention-mini-journey{display:grid;grid-template-columns:minmax(0,1fr) 17px minmax(0,1fr) 17px minmax(0,1fr);align-items:center;gap:4px;margin-top:auto;padding:16px 9px;background:#fff7f8;border:1px solid #fae9ec;border-radius:11px}
+.retention-mini-step{display:flex;flex-direction:column;gap:6px;text-align:center;align-items:center;min-width:0;color:#765762;font-size:9px;font-weight:750;line-height:1.33}
+.retention-mini-step i{font-style:normal;display:grid;place-items:center;border:1px solid #f3d3d9;background:#fff;color:#bc2f4d;border-radius:7px;width:26px;height:26px;font-size:14px}
+.retention-mini-step:last-child i{background:linear-gradient(145deg,#f56d73,#ae1539);border-color:#d63753;color:white}
+.retention-mini-arrow{color:#d1a3ad;text-align:center;font-size:15px;font-weight:800}
+.retention-stream-result{margin-top:13px;display:flex;align-items:center;gap:7px;color:#924259;font-size:10px;font-weight:750}
+.retention-stream-result .retention-spark{height:7px;width:7px;flex:0 0 7px;background:#cc2445;border-radius:50%;box-shadow:0 0 0 3px #ffe9ed}
+.retention-loop{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;margin-top:19px;padding:27px 31px;background:#1d131a;border-radius:17px;color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.retention-loop:before{content:"";position:absolute;z-index:-1;pointer-events:none;right:0;top:-90px;width:470px;height:320px;background:radial-gradient(ellipse,rgba(232,48,80,.32),transparent 72%)}
+.retention-loop-label{font-size:9px;letter-spacing:.17em;font-weight:800;color:#ff96a8;display:block;margin-bottom:10px}
+.retention-loop h3{font-size:clamp(18px,2.2vw,25px);letter-spacing:-.04em;margin:0 0 7px;font-weight:800}
+.retention-loop p{font-size:11px;line-height:1.7;max-width:710px;margin:0;color:#cbbdc5}
+.retention-loop-graphic{display:flex;gap:12px;align-items:center;font-size:10px;font-weight:800;white-space:nowrap}
+.retention-loop-graphic .retention-loop-pill{border:1px solid #875062;background:rgba(255,255,255,.065);border-radius:10px;padding:12px 14px;color:#ffe2e7}
+.retention-loop-graphic .retention-loop-arrow{color:#ff8a9a;font-size:18px}
+.retention-section .retention-disclaimer{color:#989098;font-size:9.5px;line-height:1.5;margin-top:15px}
+@media(max-width:1050px){
+ .retention-head{align-items:start}
+ .retention-stream{padding:23px 18px}
+ .retention-stream h3{font-size:18px}
+ .retention-mini-journey{grid-template-columns:minmax(0,1fr);gap:4px;padding:10px}
+ .retention-mini-step{flex-direction:row;text-align:left;justify-content:flex-start;gap:8px;width:100%}
+ .retention-mini-step i{width:23px;height:23px;flex:0 0 23px}
+ .retention-mini-arrow{line-height:12px;font-size:12px;text-align:left;margin-left:7px;transform:rotate(90deg);width:15px}
+}
+@media(max-width:760px){
+ .retention-section{padding-top:75px;padding-bottom:80px}
+ .retention-head{display:block;margin-bottom:25px}
+ .retention-title h2{font-size:clamp(34px,7vw,46px);margin:17px 0 14px}
+ .retention-intro{max-width:570px;font-size:12px}
+ .retention-streams{grid-template-columns:1fr;gap:12px}
+ .retention-stream{padding:23px;min-height:0}
+ .retention-stream h3{font-size:20px}
+ .retention-stream>p{margin-bottom:18px}
+ .retention-mini-journey{display:flex;align-items:center;gap:5px}
+ .retention-mini-step{flex:1;display:flex;flex-direction:column;text-align:center;align-items:center;justify-content:center;min-width:0;font-size:9px}
+ .retention-mini-step i{width:27px;height:27px;flex:none}
+ .retention-mini-arrow{margin:0;transform:none;width:auto}
+ .retention-loop{grid-template-columns:1fr;padding:23px 21px;gap:20px}
+ .retention-loop-graphic{gap:8px;justify-content:flex-start}
+ .retention-loop-graphic .retention-loop-pill{font-size:9px;padding:10px 12px}
+}
+@media(max-width:400px){
+ .retention-mini-journey{padding:11px 6px}
+ .retention-mini-step{font-size:8px}
+ .retention-stream{padding:21px 18px}
+ .retention-loop-graphic{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.retention-section *{scroll-behavior:auto}}
+/* The hero now demonstrates ongoing revenue, not a journey that ends at reviews. */
+.workspace .journey-step{min-width:0}
+.workspace .step-copy{min-width:0}
+.workspace .step-copy strong{white-space:normal;line-height:1.25}
+.workspace .step-copy small{white-space:normal;line-height:1.4}
+.workspace .activity-time{white-space:nowrap}
+.workspace .workspace-main{min-width:0}
+.workspace .journey-step{padding-top:8px;padding-bottom:8px}
+.workspace .journey-left{padding-bottom:13px}
+.demo-continuity{display:inline-flex;align-items:center;gap:8px;margin-top:13px;font-size:9px;font-weight:800;letter-spacing:.018em;color:#e9adb8}
+.demo-continuity-dot{height:7px;width:7px;border-radius:50%;border:1.5px solid #ec6e86;box-shadow:0 0 0 3px rgba(236,110,134,.09)}
+@media(max-width:580px){
+ .workspace .journey-step{padding:6px;min-height:43px}
+ .workspace .step-copy small{font-size:7px}
+ .workspace .step-copy strong{font-size:9.5px}
+ .workspace .journey-right{margin-top:8px}
+ .workspace .activity-card{padding:11px}
+ .demo-continuity{margin-top:10px;font-size:8px}
+}
