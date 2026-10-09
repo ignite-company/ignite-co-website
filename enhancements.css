@@ -48,3 +48,5 @@ body.proof-dialog-open{overflow:hidden}
  .proof-scroller{overflow-x:auto;scroll-snap-type:x proximity}
  .proof-slide{scroll-snap-align:center}
 }
+/* Respect the HTML hidden attribute. Without this, display:flex keeps the image lightbox open over the entire site on first load. */
+.proof-dialog[hidden]{display:none !important}
