@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./pricing.css" />
   <link rel="stylesheet" href="./mobile-modal.css" />
   <link rel="stylesheet" href="./lifecycle.css" />
+  <link rel="stylesheet" href="./revenue-calculator.css" />
   <title>Ignite Co. | Book More Jobs and Grow Repeat Business</title>
 </head>
 <body>
@@ -69,6 +70,93 @@
       <div class="proof-dialog" id="proof-dialog" role="dialog" aria-modal="true" aria-label="Full-size project proof" hidden>
         <button type="button" class="proof-dialog-close" id="proof-dialog-close" aria-label="Close full-size image">×</button>
         <img id="proof-full-image" src="" alt="" />
+      </div>
+    </section>
+
+    <!-- Revenue opportunity calculator: additive section, no existing conversion code changed. -->
+    <section class="rc-section" id="revenue-calculator" aria-labelledby="rc-title">
+      <div class="container">
+        <div class="rc-heading">
+          <span class="section-label"><span></span> FREE REVENUE OPPORTUNITY CALCULATOR</span>
+          <h2 id="rc-title">How much revenue is<br/><em>hiding in your business?</em></h2>
+          <p>You've already earned the attention. What happens if you stop missing inquiries, follow up on undecided customers and bring past clients back? Put in your numbers and see the opportunity.</p>
+          <div class="rc-proof" aria-label="Ignite Co. reported experience">
+            <span>5,000+ leads generated</span><span>$1M+ client revenue generated</span><span>4+ years of experience</span>
+          </div>
+          <p class="rc-proof-note">Ignite Co.-reported experience. The calculator uses illustrative assumptions, not guaranteed outcomes.</p>
+        </div>
+
+        <div class="rc-shell">
+          <div class="rc-entry">
+            <span class="rc-step">01 / TELL US ABOUT YOUR BUSINESS</span>
+            <h3>Your numbers. Your opportunity.</h3>
+            <p class="rc-entry-intro">Adjust any field. Your estimate updates instantly. No email required.</p>
+            <div class="rc-fields">
+              <div class="rc-field">
+                <label for="rc-leads">New inquiries per month</label>
+                <input id="rc-leads" type="number" inputmode="numeric" min="0" max="100000" step="1" value="120"/>
+                <small>Calls, website forms and messages.</small>
+              </div>
+              <div class="rc-field">
+                <label for="rc-ticket">Average completed job value</label>
+                <div class="rc-input-wrap"><input id="rc-ticket" type="number" inputmode="decimal" min="0" max="1000000" step="50" value="1500"/><span class="rc-unit">$</span></div>
+                <small>Gross revenue per booked job.</small>
+              </div>
+              <div class="rc-field">
+                <label for="rc-close">Close rate on answered inquiries</label>
+                <div class="rc-input-wrap"><input id="rc-close" type="number" inputmode="decimal" min="0" max="100" step="1" value="25"/><span class="rc-unit">%</span></div>
+                <small>Of the leads you reach, how many book?</small>
+              </div>
+              <div class="rc-field">
+                <label for="rc-missed">Inquiries not reached in time</label>
+                <div class="rc-input-wrap"><input id="rc-missed" type="number" inputmode="decimal" min="0" max="100" step="1" value="20"/><span class="rc-unit">%</span></div>
+                <small>Missed calls or late first responses.</small>
+              </div>
+              <div class="rc-field">
+                <label for="rc-followup">How consistent is your follow-up?</label>
+                <select id="rc-followup"><option value="rarely">Rarely / almost never</option><option value="sometimes" selected>Sometimes</option><option value="consistently">Consistently</option></select>
+                <small>After a lead doesn't book right away.</small>
+              </div>
+              <div class="rc-field">
+                <label for="rc-past">Past customers you could contact / month</label>
+                <input id="rc-past" type="number" inputmode="numeric" min="0" max="100000" step="1" value="50"/>
+                <small>Not already included in new inquiries.</small>
+              </div>
+              <div class="rc-field">
+                <label for="rc-hours">Hours spent on manual follow-up / week</label>
+                <div class="rc-input-wrap"><input id="rc-hours" type="number" inputmode="decimal" min="0" max="168" step="0.5" value="6"/><span class="rc-unit">hrs</span></div>
+                <small>Calls, reminders and check-ins.</small>
+              </div>
+            </div>
+            <div class="rc-entry-bottom"><i aria-hidden="true">↗</i><span>Better response. Better follow-up. More repeat work. See the potential without buying another lead.</span></div>
+          </div>
+          <div class="rc-results" aria-label="Estimated revenue opportunity">
+            <div class="rc-live">LIVE ESTIMATE / BASED ON YOUR INPUTS</div>
+            <p class="rc-results-title">Potential additional gross revenue / month</p>
+            <p class="rc-main-number"><span id="rc-revenue">$0</span><small>/mo</small></p>
+            <p class="rc-results-sub">Modeled upside from improving the systems you already use. This is potential revenue, not a promise or net profit.</p>
+            <div class="rc-metrics">
+              <div class="rc-metric"><strong id="rc-yearly">$0</strong><span>Potential annual gross revenue</span></div>
+              <div class="rc-metric"><strong id="rc-jobs">0.0</strong><span>Extra jobs / month, estimated</span></div>
+              <div class="rc-metric"><strong id="rc-time">0.0h</strong><span>Admin time saved / month</span></div>
+            </div>
+            <div class="rc-breakdown">
+              <div class="rc-breakdown-heading"><h4>Where the opportunity could come from</h4><span>MONTHLY</span></div>
+              <div class="rc-bar-row"><div class="rc-bar-top"><span>Recover missed inquiries</span><strong id="rc-missed-amount">$0</strong></div><div class="rc-bar-track"><span id="rc-missed-bar" class="rc-bar-fill"></span></div></div>
+              <div class="rc-bar-row"><div class="rc-bar-top"><span>Convert more open opportunities</span><strong id="rc-follow-amount">$0</strong></div><div class="rc-bar-track"><span id="rc-follow-bar" class="rc-bar-fill follow"></span></div></div>
+              <div class="rc-bar-row"><div class="rc-bar-top"><span>Bring previous customers back</span><strong id="rc-repeat-amount">$0</strong></div><div class="rc-bar-track"><span id="rc-repeat-bar" class="rc-bar-fill repeat"></span></div></div>
+            </div>
+            <div class="rc-actions">
+              <a class="rc-cta" href="#contact">Let's uncover this in your business <span aria-hidden="true">↗</span></a>
+              <p class="rc-caveat">Illustrative estimate only. Actual bookings, margins and revenue depend on demand, customer needs, lead quality and implementation.</p>
+            </div>
+          </div>
+        </div>
+
+        <details class="rc-details">
+          <summary>How is this estimated?</summary>
+          <p>We model three separate groups to avoid counting the same inquiry twice: (1) previously unreached inquiries, assuming 45% become reachable with faster response and then close at your stated rate; (2) reached but unbooked inquiries, assuming an additional 7%, 4.5% or 1.5% book through improved follow-up when your current follow-up is rare, occasional or consistent; (3) past customers who are not counted among new inquiries, assuming 3.5% book again through reactivation. Time savings assume 65% of the follow-up hours you entered. These percentages are modeling assumptions rather than verified Ignite Co. historical conversion rates. Estimates are gross revenue before costs, with no guarantee of results.</p>
+        </details>
       </div>
     </section>
     <section class="section intro-section" id="systems"><div class="container"><div class="section-head split-head"><div><span class="section-label"><span></span> THE PROBLEM WE SOLVE</span><h2>Get more jobs from <em>every opportunity.</em></h2></div><p>More inquiries won't help if calls are missed, follow-up stops, or estimates go unanswered. We strengthen the systems that book the first job, then keep your business connected when customers need you again.</p></div><div class="problem-grid"><article class="problem-card"><div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h4"/></svg></div><p class="problem-overline">01 / CONVERT</p><h3>Turn more inquiries into booked work.</h3><p>Better lead capture, faster responses, and a clear path to booking help your team win more of the work already coming in.</p><div class="card-graphic graphic-attract"><span class="attract-dot dot-one"></span><span class="attract-dot dot-two"></span><span class="attract-dot dot-three"></span><span class="attract-center">✳</span></div></article><article class="problem-card"><div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 16.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 2.5 6.2 2 2 0 0 1 4.5 4h3L9 8l-2 2a13 13 0 0 0 7 7l2-2 4 1.5z"/></svg></div><p class="problem-overline">02 / FOLLOW THROUGH</p><h3>Keep every opportunity moving.</h3><p>Open estimates and homeowners who need more time get thoughtful follow-up instead of falling out of the pipeline.</p><div class="card-graphic graphic-respond"><span class="chat-bubble small-chat">Estimate still open</span><span class="chat-bubble response-chat"><span class="tiny-check">✓</span> Checking in now</span></div></article><article class="problem-card"><div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 15l3 3 5-5"/></svg></div><p class="problem-overline">03 / REPEAT</p><h3>Turn good service into repeat business.</h3><p>After a job is finished, ongoing customer care and relevant check-ins help you earn the next one.</p><div class="card-graphic graphic-convert"><span class="booking-check">✓</span><span>Another job booked</span><small>A returning customer</small></div></article></div></div></section>
@@ -197,5 +285,6 @@
   <script src="./script.js" defer></script>
   <script src="./enhancements.js" defer></script>
   <script src="./mobile-modal.js" defer></script>
+  <script src="./revenue-calculator.js" defer></script>
 </body>
 </html>
