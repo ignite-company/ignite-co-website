@@ -18,6 +18,63 @@
   <link rel="stylesheet" href="./mobile-modal.css" />
   <link rel="stylesheet" href="./lifecycle.css" />
   <link rel="stylesheet" href="./revenue-calculator.css" />
+
+<style>
+/* Compact 9-stage live process preview while preserving every step and interaction. */
+.hero.hero-compact .showcase-wrap{margin-top:38px}
+.hero.hero-compact .workspace,.hero.hero-compact .workspace-body{min-height:0}
+.hero.hero-compact .workspace-main{padding:18px 20px 15px}
+.hero.hero-compact .journey-topline{margin:13px 0 9px}
+.hero.hero-compact .journey-grid{grid-template-columns:minmax(0,1.16fr) minmax(0,1fr);gap:11px}
+.hero.hero-compact .workspace .journey-left{padding:11px}
+.hero.hero-compact .journey-title-row{margin:0 3px 8px}
+.hero.hero-compact .journey-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+.hero.hero-compact .workspace .journey-step{min-height:43px;padding:6px;gap:7px}
+.hero.hero-compact .workspace .step-copy small{display:none}
+.hero.hero-compact .workspace .step-copy strong{font-size:9px;line-height:1.25;white-space:normal}
+.hero.hero-compact .workspace .step-mark{flex:0 0 20px;width:20px;height:20px}
+.hero.hero-compact .workspace .step-state{flex:0 0 6px;width:6px;height:6px}
+.hero.hero-compact .activity-card{min-height:225px}
+.hero.hero-compact .activity-visual{height:61px}
+.hero.hero-compact .visual-ring{height:50px;width:50px}
+.hero.hero-compact .visual-ring span{font-size:26px}
+.hero.hero-compact .demo-bottom{margin-top:11px}
+.hero.hero-compact .showcase-footnote{margin-top:15px}
+/* White website, transparent logos: no background boxes or white gradients. */
+.site-logos{padding:36px 0 37px;background:#fff;overflow:hidden}
+.site-logos-heading{max-width:1030px;margin:0 auto 20px;padding:0 22px;display:flex;justify-content:center;align-items:center;gap:14px}
+.site-logos-heading h2{font-family:var(--font);font-size:clamp(13px,1.55vw,17px);font-weight:800;letter-spacing:-.02em;color:#3c363d;text-align:center;margin:0}
+.site-logos-toggle{border:0;background:transparent;color:#777983;font-size:11px;font-weight:700;padding:7px 4px;white-space:nowrap}
+.site-logos-toggle:hover{color:#c2526b}
+.site-logos-toggle:focus-visible,.site-logos-rail:focus-visible{outline:2px solid #cc6378;outline-offset:2px}
+.site-logos-rail{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;max-width:1150px;margin:0 auto}
+.site-logos-rail::-webkit-scrollbar{display:none}
+.site-logos-track{display:flex;align-items:center;width:max-content}
+.site-logos-set{display:flex;align-items:center;flex:none;gap:26px;padding-right:26px}
+.site-logo{width:160px;height:87px;display:flex;flex:none;align-items:center;justify-content:center;padding:3px;background:transparent;border:0;border-radius:0;box-shadow:none}
+.site-logo img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.17))}
+@media(max-width:820px){
+.hero.hero-compact .journey-grid{grid-template-columns:minmax(0,1.16fr) minmax(0,1fr)}
+.hero.hero-compact .workspace-main{padding:17px 14px 13px}
+}
+@media(max-width:580px){
+.hero.hero-compact .showcase-wrap{margin-top:27px}
+.hero.hero-compact .journey-grid{display:block}
+.hero.hero-compact .workspace .journey-step{min-height:43px;padding:6px 5px;gap:5px}
+.hero.hero-compact .workspace .step-copy strong{font-size:9px}
+.hero.hero-compact .workspace .step-state{display:none}
+.hero.hero-compact .journey-right{margin-top:7px}
+.hero.hero-compact .activity-card{min-height:0}
+.hero.hero-compact .demo-heading h2{font-size:15px}
+.site-logos{padding:28px 0 27px}
+.site-logos-heading{gap:10px;margin-bottom:14px;padding:0 10px}
+.site-logos-heading h2{font-size:13px}
+.site-logos-toggle{font-size:10px}
+.site-logos-set{gap:19px;padding-right:19px}
+.site-logo{width:126px;height:70px}
+}
+@media(prefers-reduced-motion:reduce){.site-logos-rail{scroll-behavior:auto!important}}
+</style>
   <title>Ignite Co. | Book More Jobs and Grow Repeat Business</title>
 </head>
 <body>
@@ -33,7 +90,7 @@
     <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden><a href="./solutions.html">Solutions</a><a href="#systems">The systems</a><a href="#how-it-works">How it works</a><a href="#industries">Who we help</a><a href="#results">Results</a><a href="#growth-loop">Repeat revenue</a><a href="./about.html">About us</a><a class="mobile-cta" href="#contact">Let's talk ↗</a></nav>
   </header>
   <main>
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero hero-compact" aria-labelledby="hero-title">
       <div class="hero-eyebrow"><span class="eyebrow-spark">✳</span> BUILT FOR CONSISTENT HOME SERVICE GROWTH</div>
       <h1 id="hero-title"><span>Book more jobs today.</span><span class="muted">Keep customers coming back.</span></h1>
       <p class="hero-description">We improve how your business attracts inquiries, responds, follows up, and books work. Then we build the systems that recover missed opportunities, bring past customers back, and save your team time. More booked jobs now. More growth over time.</p>
@@ -57,6 +114,35 @@
         <p class="showcase-footnote"><span class="footnote-line"></span> Illustrative workflow showing stronger conversion, follow-up and repeat customer care. Not live customer data. <span class="footnote-line"></span></p>
       </div>
     </section>
+    <section class="site-logos" aria-labelledby="site-logos-heading">
+  <div class="site-logos-heading"><h2 id="site-logos-heading">Companies we've worked with</h2><button class="site-logos-toggle" id="site-logos-toggle" type="button" aria-label="Pause automatic company logo slider" aria-pressed="false">Ⅱ Pause</button></div>
+  <div class="site-logos-rail" id="site-logos-rail" tabindex="0" aria-label="Automatically scrolling logos of companies we've worked with"><div class="site-logos-track"><div class="site-logos-set" id="site-logos-original">
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a9c56db4013f612d9f.png" alt="Company we've worked with, logo 1" decoding="async" loading="eager"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a9c56db4013f612d9e.png" alt="Company we've worked with, logo 2" decoding="async" loading="eager"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a982125b9874903bea.png" alt="Company we've worked with, logo 3" decoding="async" loading="eager"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a97f9c717c7cc87936.png" alt="Company we've worked with, logo 4" decoding="async" loading="eager"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a967457445b9f1b14e.png" alt="Company we've worked with, logo 5" decoding="async" loading="eager"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a982125b9874903bec.png" alt="Company we've worked with, logo 6" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a982125b9874903be9.png" alt="Company we've worked with, logo 7" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a97f9c717c7cc87935.png" alt="Company we've worked with, logo 8" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a9f07c4898898030cf.png" alt="Company we've worked with, logo 9" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a929adc07d21ecd4bf.png" alt="Company we've worked with, logo 10" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a9f90b5bc73b09d571.png" alt="Company we've worked with, logo 11" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a9f90b5bc73b09d570.png" alt="Company we've worked with, logo 12" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a9330f3d5313e66ec9.png" alt="Company we've worked with, logo 13" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a9fa8afa3be0b450da.png" alt="Company we've worked with, logo 14" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b9a951bf95bcbb74d36c.png" alt="Company we've worked with, logo 15" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03ba02f07c489889803e42.png" alt="Company we've worked with, logo 16" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a34d5154ffe73711d034b62.png" alt="Company we've worked with, logo 17" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a44118718d22f08d731d0c5.png" alt="Company we've worked with, logo 18" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a46dc3d62d435fa95740840.png" alt="Company we've worked with, logo 19" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a712b07497cd89d243fe013.png" alt="Company we've worked with, logo 20" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a84fc2dce9e46f41d01cac0.png" alt="Company we've worked with, logo 21" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a9363b20914f1121510a901.png" alt="Company we've worked with, logo 22" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6aac8155bdaa5e26a90f2bf2.png" alt="Company we've worked with, logo 23" decoding="async" loading="lazy"></span>
+<span class="site-logo"><img src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6ab1c9e4bdaa5e26a97f4bc3.png" alt="Company we've worked with, logo 24" decoding="async" loading="lazy"></span>
+  </div></div></div>
+</section>
     <section class="proof-section" id="results" aria-labelledby="proof-title">
       <div class="container proof-heading">
         <span class="proof-eyebrow">Work, not just words</span>
@@ -286,5 +372,43 @@
   <script src="./enhancements.js" defer></script>
   <script src="./mobile-modal.js" defer></script>
   <script src="./revenue-calculator.js" defer></script>
+<script>
+(() => {
+  'use strict';
+  const rail=document.getElementById('site-logos-rail');
+  const first=document.getElementById('site-logos-original');
+  const toggle=document.getElementById('site-logos-toggle');
+  if(!rail||!first||!toggle)return;
+  const clone=first.cloneNode(true);
+  clone.removeAttribute('id');
+  clone.setAttribute('aria-hidden','true');
+  clone.querySelectorAll('img').forEach(img=>img.alt='');
+  first.after(clone);
+  let paused=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let hover=false,focus=false,touch=false,visible=true,lastFrame=0;
+  const update=()=>{toggle.textContent=paused?'▶ Play':'Ⅱ Pause';toggle.setAttribute('aria-pressed',String(paused));toggle.setAttribute('aria-label',paused?'Play automatic company logo slider':'Pause automatic company logo slider')};
+  update();
+  toggle.addEventListener('click',()=>{paused=!paused;update()});
+  rail.addEventListener('mouseenter',()=>hover=true);
+  rail.addEventListener('mouseleave',()=>hover=false);
+  rail.addEventListener('focusin',()=>focus=true);
+  rail.addEventListener('focusout',e=>{if(!rail.contains(e.relatedTarget))focus=false});
+  rail.addEventListener('touchstart',()=>touch=true,{passive:true});
+  rail.addEventListener('touchend',()=>touch=false,{passive:true});
+  rail.addEventListener('touchcancel',()=>touch=false,{passive:true});
+  if('IntersectionObserver' in window)new IntersectionObserver(entries=>visible=entries[0].isIntersecting,{threshold:.02}).observe(rail);
+  const animate=now=>{
+    if(!lastFrame)lastFrame=now;
+    const dt=Math.min(now-lastFrame,64);
+    lastFrame=now;
+    if(!paused&&!hover&&!focus&&!touch&&visible&&!document.hidden){
+      const width=first.getBoundingClientRect().width;
+      if(width>0){const next=rail.scrollLeft+dt*.062;rail.scrollLeft=next>=width?next%width:next}
+    }
+    requestAnimationFrame(animate);
+  };
+  requestAnimationFrame(animate);
+})();
+</script>
 </body>
 </html>
