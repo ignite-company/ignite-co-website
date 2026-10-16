@@ -41,3 +41,23 @@
   .explore-services-card strong{font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){.explore-services-card{transition:none}}
+
+/* Compact, accessible service navigation. All SEO pages remain linked in the DOM. */
+.nav-shell .nav-links{gap:27px}
+.nav-services{position:relative;z-index:45}
+.nav-services>summary{font-size:12px;font-weight:700;color:#4c4c58;list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;padding:10px 0}
+.nav-services>summary::-webkit-details-marker,.mobile-services>summary::-webkit-details-marker{display:none}
+.nav-services>summary span,.mobile-services>summary span{display:inline-block;font-size:12px;transition:transform .15s}
+.nav-services[open]>summary span,.mobile-services[open]>summary span{transform:rotate(180deg)}
+.nav-services>summary:hover,.nav-services>summary.nav-services-active,.nav-services[open]>summary{color:#b52847}
+.nav-services>summary:focus-visible,.mobile-services>summary:focus-visible{outline:2px solid #b52847;outline-offset:5px;border-radius:4px}
+.nav-services-panel{position:absolute;top:calc(100% + 10px);left:-19px;width:min(310px,92vw);padding:9px;display:flex;flex-direction:column;background:#fff;border:1px solid #f0e1e5;border-radius:13px;box-shadow:0 15px 45px rgba(41,21,27,.15)}
+.nav-links .nav-services-panel a{white-space:normal;font-size:12px;line-height:1.4;font-weight:700;padding:12px 14px;color:#45414a;border-radius:8px}
+.nav-links .nav-services-panel a:hover,.nav-links .nav-services-panel a[aria-current="page"]{background:#fff2f4;color:#ac2a49}
+.mobile-services{padding:0 5px;border-bottom:1px solid #f3edef}
+.mobile-services>summary{display:flex;justify-content:space-between;align-items:center;list-style:none;cursor:pointer;padding:13px 0;font-size:13px;font-weight:700;color:#4c4c58}
+.mobile-services>summary.nav-services-active{color:#b52847}
+.mobile-services-panel{display:flex;flex-direction:column;padding:0 0 9px 11px;border-left:2px solid #f5dce2;margin-left:4px}
+.mobile-menu .mobile-services-panel a{padding:10px 10px;font-size:12.5px;font-weight:650}
+.mobile-menu .mobile-services-panel a[aria-current="page"]{color:#a32e49;background:#fff5f6;border-radius:7px}
+@media(max-width:1050px){.nav-services-panel{position:static;box-shadow:none}}
