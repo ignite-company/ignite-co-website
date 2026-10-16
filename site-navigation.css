@@ -1,0 +1,43 @@
+/* Consistent direct navigation across Ignite Co.'s main and service pages. */
+.nav-shell{gap:16px}
+.nav-shell .nav-links{gap:17px;margin-left:0;flex-wrap:nowrap}
+.nav-shell .nav-links a{white-space:nowrap;font-size:11.5px}
+.nav-shell .nav-links a[aria-current="page"]{color:#b52847;font-weight:800}
+.footer-right{flex-wrap:wrap}
+.explore-services{background:#fff;padding:92px 0 98px}
+.explore-services-heading{text-align:center;max-width:700px;margin:0 auto 37px}
+.explore-services-heading .section-label{justify-content:center}
+.explore-services-heading h2{font-size:clamp(34px,4vw,53px);letter-spacing:-.07em;line-height:1.16;margin:17px 0}
+.explore-services-heading h2 em{font-style:normal;color:#b52d48}
+.explore-services-heading p{font-size:13px;line-height:1.85;color:#71717e;margin:0 auto;max-width:560px}
+.explore-services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;max-width:1020px;margin:auto}
+.explore-services-card{display:flex;flex-direction:column;min-height:242px;background:linear-gradient(145deg,#fff 30%,#fff8f9 100%);border:1px solid #f0e4e7;border-radius:18px;padding:26px 28px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.explore-services-card:hover{transform:translateY(-3px);border-color:#e9bdc7;box-shadow:0 16px 33px rgba(89,38,51,.08)}
+.explore-services-card:focus-visible{outline:3px solid #b83350;outline-offset:3px}
+.explore-services-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.explore-services-number{font-size:11px;font-weight:800;color:#b53450;background:#fff0f2;border:1px solid #f8dfe4;padding:7px 9px;border-radius:7px}
+.explore-services-arrow{font-size:19px;color:#b53450}
+.explore-services-eyebrow{font-size:10px;letter-spacing:.1em;color:#a45164;font-weight:800;margin-bottom:10px}
+.explore-services-card strong{font-size:21px;font-weight:800;letter-spacing:-.055em;line-height:1.23}
+.explore-services-description{font-size:12px;line-height:1.75;color:#6a6672;margin-top:10px;max-width:420px}
+.explore-services-action{margin-top:auto;padding-top:22px;color:#af2e4b;font-size:11px;font-weight:800;display:inline-flex;align-items:center;gap:10px}
+.explore-services-more{text-align:center;margin:27px 0 0}
+.explore-services-more a{font-size:12px;font-weight:800;color:#9c2c46;border-bottom:1px solid #e9acb7;padding-bottom:5px}
+@media(max-width:1050px){
+  .nav-shell .nav-links,.nav-shell .nav-actions{display:none}
+  .nav-shell .menu-toggle{display:block}
+  .mobile-menu:not([hidden]){display:flex;flex-direction:column;gap:0;background:rgba(255,255,255,.99);padding:8px 27px 18px;border-top:1px solid #efeff1;border-bottom:1px solid #efeff1;box-shadow:0 15px 30px rgba(0,0,0,.04)}
+  .mobile-menu a{padding:13px 5px;font-size:13px;font-weight:700}
+  .mobile-menu a[aria-current="page"]{color:#b52847}
+  .mobile-menu .mobile-cta{color:#c15c6d}
+}
+@media(max-width:700px){
+  .explore-services{padding:65px 0 73px}
+  .explore-services-heading{margin-bottom:27px;padding:0 4px}
+  .explore-services-heading h2{font-size:clamp(32px,9vw,43px)}
+  .explore-services-grid{grid-template-columns:1fr;gap:12px}
+  .explore-services-card{min-height:0;padding:23px 22px}
+  .explore-services-card-top{margin-bottom:17px}
+  .explore-services-card strong{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){.explore-services-card{transition:none}}
