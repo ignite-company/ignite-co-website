@@ -61,3 +61,9 @@
 .mobile-menu .mobile-services-panel a{padding:10px 10px;font-size:12.5px;font-weight:650}
 .mobile-menu .mobile-services-panel a[aria-current="page"]{color:#a32e49;background:#fff5f6;border-radius:7px}
 @media(max-width:1050px){.nav-services-panel{position:static;box-shadow:none}}
+
+/* Linked industry tags retain the original pill styling. */
+.industry-tags>a.industry-link{display:flex;align-items:center;gap:11px;padding:14px 18px;background:#fff;border:1px solid #efeaeb;border-radius:11px;font-size:12px;font-weight:700;color:#4a4955;box-shadow:0 5px 14px rgba(50,31,34,.018);transition:border-color .2s,transform .2s}
+.industry-tags>a.industry-link i{display:grid;place-items:center;height:27px;width:27px;border-radius:8px;background:#fbeef0;color:#d16778;font-size:17px;font-style:normal;line-height:1}
+.industry-tags>a.industry-link:hover{border-color:#e4a6b4;transform:translateY(-2px)}
+.industry-tags>a.industry-link:focus-visible{outline:2px solid #b52847;outline-offset:3px}
