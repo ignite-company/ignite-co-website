@@ -168,7 +168,7 @@
           sms_consent_recorded_utc: data.smsConsent ? new Date().toISOString() : 'Not applicable',
           sms_consent_form_url: 'https://www.igniteco.org/#contact',
           sms_consent_disclosure: data.smsConsent
-            ? document.querySelector('#lead-form .sms-consent-choice span').textContent.replace(/\s+/g, ' ').trim()
+            ? document.querySelector('#lead-form .sms-consent-choice').textContent.replace(/\s+/g, ' ').trim()
             : 'Not opted in; no SMS messages should be sent',
           source: 'www.igniteco.org website contact form',
           _subject: 'New Ignite Co. website inquiry',

@@ -89,6 +89,7 @@
 <style>
 /* Isolated A2P consent styling: no changes to the website's existing layout. */
 #lead-form .sms-consent-block{margin:14px 0 9px;padding:12px 13px;border:1px solid #eee5e7;border-radius:9px;background:#fffafa}
+#lead-form .sms-consent-heading{margin:0 0 7px;color:#32262b;font-size:11px;line-height:1.35}
 #lead-form .sms-consent-choice{display:flex;align-items:flex-start;gap:10px;margin:0;color:#58515b;font-size:11px;font-weight:500;line-height:1.55;cursor:pointer}
 #lead-form .sms-consent-choice input[type="checkbox"]{display:block;flex:0 0 17px;width:17px;height:17px;min-height:17px;margin:1px 0 0;padding:0;accent-color:#be465c;box-shadow:none}
 #lead-form .sms-consent-choice span{display:block;min-width:0}
@@ -407,9 +408,10 @@
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_url" value="https://www.igniteco.org/" />
   <input type="hidden" name="_next" value="https://www.igniteco.org/thank-you.html" /><label for="lead-name">Your name</label><input id="lead-name" name="name" placeholder="Your full name" autocomplete="name" required maxlength="120"/><label for="lead-company">Company name</label><input id="lead-company" name="company" placeholder="Your home service company" autocomplete="organization" required maxlength="120"/><div class="two-fields"><div><label for="lead-email">Work email</label><input id="lead-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="254"/></div><div><label for="lead-phone">Phone number</label><input id="lead-phone" name="phone" type="tel" placeholder="(555) 000-0000" autocomplete="tel" required maxlength="30"/></div></div><label for="lead-industry">What kind of work do you do?</label><select id="lead-industry" name="industry" required><option value="" selected disabled>Select your industry</option><option>HVAC & Heating</option><option>Plumbing</option><option>Roofing</option><option>Remodeling</option><option>Electrical</option><option>Landscaping</option><option>Tree Services</option><option>Junk Removal</option><option>Other home services</option></select><div class="honeypot" aria-hidden="true"><label for="lead-website">Leave this field blank</label><input id="lead-website" name="_honey" tabindex="-1" autocomplete="off"/></div><div class="sms-consent-block">
+  <p class="sms-consent-heading"><strong>SMS Consent (Optional)</strong></p>
   <label for="lead-sms-consent" class="sms-consent-choice">
     <input type="checkbox" id="lead-sms-consent" name="sms_consent" value="yes" />
-    <span>I consent to receive non-marketing text messages from <strong>Ignite Company LLC (Ignite Co.)</strong> about my requested consultation, appointment confirmations, reminders, scheduling updates, and responses to appointment-related inquiries at the number provided. Message frequency varies. Message and data rates may apply. Reply HELP for assistance or STOP to opt out. Consent is not required to submit this form.</span>
+    I consent to receive non-marketing text messages from Ignite Company LLC (Ignite Co.) at the phone number provided about appointment confirmations, consultation reminders, scheduling updates, and responses to appointment-related inquiries. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out. Reply HELP for assistance. Consent is not required to submit this form.
   </label>
   <p class="sms-consent-links">Read our <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="./terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</p>
 </div><button class="btn btn-dark form-submit" id="lead-submit" type="submit">Request a conversation <span aria-hidden="true">↗</span></button><div class="form-message" id="form-message" role="status" aria-live="polite"></div>
