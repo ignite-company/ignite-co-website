@@ -16,3 +16,19 @@
     }
   });
 })();
+
+/* Add small legal links to existing footers without rewriting or moving site sections. */
+(() => {
+  const footer = document.querySelector('.footer-bottom');
+  if (!footer || footer.querySelector('a[href$="privacy-policy.html"]')) return;
+  const trailing = footer.lastElementChild;
+  if (!trailing || trailing.tagName !== 'SPAN') return;
+  const suffix = document.createElement('span');
+  suffix.innerHTML = ' · <a href="./privacy-policy.html">Privacy Policy</a> · <a href="./terms-and-conditions.html">Terms &amp; Conditions</a>';
+  suffix.querySelectorAll('a').forEach(link => {
+    link.style.color = 'inherit';
+    link.style.textDecoration = 'underline';
+    link.style.textUnderlineOffset = '2px';
+  });
+  trailing.appendChild(suffix);
+})();

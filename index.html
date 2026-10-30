@@ -85,6 +85,20 @@
 </style>
   <title>Ignite Co. | Home Service Marketing & Growth Systems</title>
   <link rel="stylesheet" href="./site-navigation.css" />
+
+<style>
+/* Isolated A2P consent styling: no changes to the website's existing layout. */
+#lead-form .sms-consent-block{margin:14px 0 9px;padding:12px 13px;border:1px solid #eee5e7;border-radius:9px;background:#fffafa}
+#lead-form .sms-consent-choice{display:flex;align-items:flex-start;gap:10px;margin:0;color:#58515b;font-size:11px;font-weight:500;line-height:1.55;cursor:pointer}
+#lead-form .sms-consent-choice input[type="checkbox"]{display:block;flex:0 0 17px;width:17px;height:17px;min-height:17px;margin:1px 0 0;padding:0;accent-color:#be465c;box-shadow:none}
+#lead-form .sms-consent-choice span{display:block;min-width:0}
+#lead-form .sms-consent-choice strong{color:#332a2d;font-weight:750}
+#lead-form .sms-consent-links{margin:8px 0 0 27px;color:#7b7680;font-size:10px;line-height:1.6}
+#lead-form .sms-consent-links a,.footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+#lead-form .sms-consent-links a:hover,.footer-bottom a:hover{color:#a73a51}
+.footer-bottom{gap:12px;flex-wrap:wrap}
+.footer-bottom span:last-child{line-height:1.7}
+</style>
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
@@ -392,9 +406,16 @@
   <input type="hidden" name="_template" value="table" />
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_url" value="https://www.igniteco.org/" />
-  <input type="hidden" name="_next" value="https://www.igniteco.org/thank-you.html" /><label for="lead-name">Your name</label><input id="lead-name" name="name" placeholder="Your full name" autocomplete="name" required maxlength="120"/><label for="lead-company">Company name</label><input id="lead-company" name="company" placeholder="Your home service company" autocomplete="organization" required maxlength="120"/><div class="two-fields"><div><label for="lead-email">Work email</label><input id="lead-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="254"/></div><div><label for="lead-phone">Phone number</label><input id="lead-phone" name="phone" type="tel" placeholder="(555) 000-0000" autocomplete="tel" required maxlength="30"/></div></div><label for="lead-industry">What kind of work do you do?</label><select id="lead-industry" name="industry" required><option value="" selected disabled>Select your industry</option><option>HVAC & Heating</option><option>Plumbing</option><option>Roofing</option><option>Remodeling</option><option>Electrical</option><option>Landscaping</option><option>Tree Services</option><option>Junk Removal</option><option>Other home services</option></select><div class="honeypot" aria-hidden="true"><label for="lead-website">Leave this field blank</label><input id="lead-website" name="_honey" tabindex="-1" autocomplete="off"/></div><button class="btn btn-dark form-submit" id="lead-submit" type="submit">Request a conversation <span aria-hidden="true">↗</span></button><div class="form-message" id="form-message" role="status" aria-live="polite"></div><p class="form-privacy">No hard pitch. Just a conversation about your growth.</p></form></div></div></div></section>
+  <input type="hidden" name="_next" value="https://www.igniteco.org/thank-you.html" /><label for="lead-name">Your name</label><input id="lead-name" name="name" placeholder="Your full name" autocomplete="name" required maxlength="120"/><label for="lead-company">Company name</label><input id="lead-company" name="company" placeholder="Your home service company" autocomplete="organization" required maxlength="120"/><div class="two-fields"><div><label for="lead-email">Work email</label><input id="lead-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="254"/></div><div><label for="lead-phone">Phone number</label><input id="lead-phone" name="phone" type="tel" placeholder="(555) 000-0000" autocomplete="tel" required maxlength="30"/></div></div><label for="lead-industry">What kind of work do you do?</label><select id="lead-industry" name="industry" required><option value="" selected disabled>Select your industry</option><option>HVAC & Heating</option><option>Plumbing</option><option>Roofing</option><option>Remodeling</option><option>Electrical</option><option>Landscaping</option><option>Tree Services</option><option>Junk Removal</option><option>Other home services</option></select><div class="honeypot" aria-hidden="true"><label for="lead-website">Leave this field blank</label><input id="lead-website" name="_honey" tabindex="-1" autocomplete="off"/></div><button class="btn btn-dark form-submit" id="lead-submit" type="submit">Request a conversation <span aria-hidden="true">↗</span></button><div class="form-message" id="form-message" role="status" aria-live="polite"></div><div class="sms-consent-block">
+  <label for="lead-sms-consent" class="sms-consent-choice">
+    <input type="checkbox" id="lead-sms-consent" name="sms_consent" value="yes" />
+    <span>I consent to receive non-marketing text messages from <strong>Ignite Company LLC (Ignite Co.)</strong> about my requested consultation, appointment confirmations, reminders, scheduling updates, and responses to appointment-related inquiries at the number provided. Message frequency varies. Message and data rates may apply. Reply HELP for assistance or STOP to opt out. Consent is not required to submit this form.</span>
+  </label>
+  <p class="sms-consent-links">Read our <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="./terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</p>
+</div>
+<p class="form-privacy">No hard pitch. Just a conversation about your growth.</p></form></div></div></div></section>
   </main>
-  <footer class="footer"><div class="container footer-inner"><div><a class="brand footer-brand" href="#top"><img class="brand-logo" src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b7c8f90b5bc73b099791.png" alt="Ignite Co." loading="lazy" /></a><p>The growth system for home service companies.</p></div><div class="footer-right"><a href="./solutions.html">Solutions</a><a href="./home-improvement-marketing-agency.html">Home improvement marketing</a><a href="./kitchen-bath-remodeling-marketing.html">Kitchen & bath marketing</a><a href="./remodeling-contractor-marketing-automation.html">For remodelers</a><a href="./home-service-crm-automation.html">CRM & automation</a><a href="#systems">The systems</a><a href="#how-it-works">How it works</a><a href="./about.html">About us</a><a href="#contact">Get in touch</a><a href="#top" class="back-top">Back to top ↑</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Ignite Co. All rights reserved.</span><span>Built to grow with your business.</span></div></footer>
+  <footer class="footer"><div class="container footer-inner"><div><a class="brand footer-brand" href="#top"><img class="brand-logo" src="https://assets.cdn.filesafe.space/bF1dT8IAVuvat84LkAVe/media/6a03b7c8f90b5bc73b099791.png" alt="Ignite Co." loading="lazy" /></a><p>The growth system for home service companies.</p></div><div class="footer-right"><a href="./solutions.html">Solutions</a><a href="./home-improvement-marketing-agency.html">Home improvement marketing</a><a href="./kitchen-bath-remodeling-marketing.html">Kitchen & bath marketing</a><a href="./remodeling-contractor-marketing-automation.html">For remodelers</a><a href="./home-service-crm-automation.html">CRM & automation</a><a href="#systems">The systems</a><a href="#how-it-works">How it works</a><a href="./about.html">About us</a><a href="#contact">Get in touch</a><a href="#top" class="back-top">Back to top ↑</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Ignite Co. All rights reserved.</span><span>Ignite Co. is operated by Ignite Company LLC. <a href="./privacy-policy.html">Privacy Policy</a> · <a href="./terms-and-conditions.html">Terms &amp; Conditions</a></span></div></footer>
 
   <!-- All conversion calls-to-action open this single instance of the existing lead form. -->
   <div class="lead-modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title" hidden>
@@ -462,7 +483,5 @@
 })();
 </script>
   <script src="./service-menu.js" defer></script>
-  <!-- LeadConnector consent widget for Ignite Co. A2P opt-in -->
-  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6ae47fd8cc650fb2f432a8e3" data-source="WEB_USER"></script>
 </body>
 </html>
