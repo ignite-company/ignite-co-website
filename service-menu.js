@@ -32,3 +32,15 @@
   });
   trailing.appendChild(suffix);
 })();
+
+/* Display consistent business contact information on all other website pages. */
+(() => {
+  const footer = document.querySelector('.footer-bottom');
+  if (!footer || footer.querySelector('[data-ignite-business-contact]')) return;
+  const contact = document.createElement('span');
+  contact.setAttribute('data-ignite-business-contact', '');
+  contact.style.cssText = 'flex-basis:100%;text-align:center;line-height:1.7;';
+  contact.innerHTML = 'Ignite Company LLC · 131 Main St., Hackensack, NJ · <a href="tel:+12019739748">(201) 973-9748</a> · <a href="mailto:asher.igniteco@gmail.com">asher.igniteco@gmail.com</a>';
+  contact.querySelectorAll('a').forEach(a => { a.style.color = 'inherit'; a.style.textDecoration = 'underline'; a.style.textUnderlineOffset = '2px'; });
+  footer.appendChild(contact);
+})();
